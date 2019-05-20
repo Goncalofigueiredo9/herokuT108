@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #555;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar a {
@@ -34,7 +38,7 @@ body {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
+  font: inherit;
   margin: 0;
 }
 
@@ -46,26 +50,58 @@ body {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  width: 100%;
+  left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content .header {
+  background: orange;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  font-size: 14px;
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 32.3%;
+  padding: 6.6px;
+  background-color: #ccc;
+  height: 550px;
+}
+
+.column a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 8px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.dropdown-content a:hover {
+.column a:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 50%;
+    height: auto;
+  }
 }
 </style>
 </head>
