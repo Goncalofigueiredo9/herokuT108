@@ -1,125 +1,61 @@
-body {
-  background-color: #EEE;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-shop {
-  display: block;
-  font-size: 1em;
-  color: #C11;
-  margin-top:16px;
-  margin-bottom:16px;
-}
-
-moeda {
-  display: block;
-  color: #1C1;
-  font-weight: bold;
-}
-
-input, textarea {
-  padding: 5px 15px;
-}
-
-input[type=text], input[type=password] {
-  width: 256px;
-}
-
-fieldset {
-  width: 256px;
-  padding: 50px;
-  background-color: lightgray;
-  border: 2px groove;
-}
-
-
-table, td {
-  background-color: lightgray;
-  border: 30px solid gray;
-  border-collapse: collapse;
-}
-
-td {
-  background-color: white;
-  text-align: center;
-  padding: 30px 10px;
-  width: 256px;
-  vertical-align: bottom;
-}
-
-.navbar user {
-  float: right;
-  padding: 5px;
-  color: #ff8;
-  text-decoration: none;
-  font-size: 5px;
-  background-color: #000;
-}
-
 .navbar {
-  width: 100%;
-  box-shadow: -10px -10px 25px #000;
-  text-transform: uppercase;
-  background-color: #000;
-  overflow: auto;
+  overflow: hidden;
+  background-color: #333;
 }
 
-.nav1 {
-  font-size: 15px;
+.navbar a {
   float: left;
-  padding: 15px;
-  color: #fff;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  transition: 0.2s;
 }
 
-.nav1:hover {
-  background-color: #d9d9d9;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-
-.active:hover {
-  background-color: #000;
-  color: #fff;
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
-
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-  }
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
 }
 
-.navbard a {
-   float:right;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.pagbar {
-  padding: 12px;
-  background-color: #555;
-}
-
-.pagbar a {
-  padding: 12px;
-  color: #39d;
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  font-size: 14px;
+  display: block;
+  text-align: left;
 }
 
-.pagbar current {
-  padding: 12px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 
-.pagbar a:hover {
-  background-color: #000;
-}
-
-iframe {
-    box-shadow: 0px 0px 20px -10px #000;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 
