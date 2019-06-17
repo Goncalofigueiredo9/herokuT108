@@ -1,38 +1,37 @@
 {% extends 'layout.html' %}
 {% block titulo %}
-
-<title>Criar Nova Conta</title>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Registo</title>
 {% endblock %}
-
 {% block conteudo %}
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body background= "/static/fds.png">
 <center>
-    <body background= "/static/fds.png">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1>Criar nova Conta</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Criar nova Conta</h1>
+<fieldset>
+    <legend>Introduza os seus dados</legend>
     <form method="post">
-        <fieldset>
-            <legend>Introduza os seus dados</legend>
-            <h4>Utilizador</h4>
-            <input type="text" name="utilizador" required>
-            <p><br></p>
-            <h4>Endereço de Email</h4>
-            <input type="text" name="email" required>
-            <p><br></p>
-            <h4>Palavra-Passe</h4>
-            <input type="password" name="passe" required>
-            <p><br></p>
-            <h4>Confirme a Passe</h4>
-            <input type="password" name="cpasse" required>
-            <p><br></p>
-            <input type="submit" value="Submeter">
-        </fieldset>
+        <h4>Utilizador</h4>
+        <input type="text" name='utilizador' required>
+        <h4>Endereço de email</h4>
+        <input type="text" name='email' required>
+        <h4>Palavra-Passe</h4>
+        <input type="password" name='passe' required>
+        <h4>Confirme a Passe</h4>
+        <input type="password" name='cpasse' required>
+        <p><br></p>
+        <input type='submit' value='Submeter'>
     </form>
-
-    {% if erro %}<h4>{{ erro }}</h4>{% endif %}
+</fieldset>
 </center>
 <br>
 <br>
@@ -44,4 +43,20 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% if erro %}
+{{ erro }}
+{% endif %}
+
+</body>
+</html>
+
 {% endblock %}
