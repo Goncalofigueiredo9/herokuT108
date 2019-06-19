@@ -9,18 +9,14 @@
 {% block conteudo %}
     <link rel="stylesheet" href="static/style.css">
 </head>
-<body background= "/static/fds.png">
+<body>
 <center>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <img class="fds" src="/static/fds.png">
+</center>
+
+<center>
 <h1>Iniciar Sessão</h1>
 <fieldset>
-    <legend>Introduza os seus dados</legend>
     <form method="post">
         <h4>Utilizador</h4>
         <input type='text' name='utilizador' required>
@@ -28,12 +24,16 @@
         <input type='password' name='passe' required>
         <p><br></p>
         <input type='submit' value="Entrar">
+        <br>
+        <br>
+        <a href="newpasse">Esqueceu-se da password ?</a>
     </form>
 </fieldset>
 
 
 {% if erro %}<h1>{{ erro }}</h1>{% endif %}
 </center>
+<p style="padding: 100px;"></p>
 </body>
 </html>
 

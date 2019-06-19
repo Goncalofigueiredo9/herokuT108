@@ -9,16 +9,14 @@
 {% block conteudo %}
     <link rel="stylesheet" href="/static/style.css">
 </head>
-<body background= "/static/fds.png">
+<body>
 <center>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <img class="fds" src="/static/fds.png">
+</center>
+
+<center>
 <h1>Criar nova Conta</h1>
 <fieldset>
-    <legend>Introduza os seus dados</legend>
     <form method="post">
         <h4>Utilizador</h4>
         <input type="text" name='utilizador' required>
@@ -34,9 +32,10 @@
 </fieldset>
 
 {% if erro %}
-{{ erro }}
+    <h2>{{ erro }}</h2>
 {% endif %}
 </center>
+<p style="padding: 100px;"></p>
 </body>
 </html>
 

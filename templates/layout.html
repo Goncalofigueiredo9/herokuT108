@@ -12,51 +12,37 @@
     {% endblock %}
 
 
-    <div class="navbar">
-        <a class="active" href="/"><img src="/static/Capturar.PNG">
-            {% for nome in menu %}
-            {% endfor %}
-            {% if usr %}
-            {% else %}
-            <div class="navbard">
-                <a class="nav1" href="/carrinho">Web Player</a>
-                <a class="nav1" href="/login">Login</a>
-                <a class="nav1" href="/registo">Registo</a>
-                <a class="nav1" href="/newpasse">Nova-Passe</a>
-                <a class="nav1" href="/apagar">Apagar</a>
-            </div>
+<div class="navbar">
+    <a class="active" href="/"><img src="/static/Capturar.PNG"></a>
+        {% for nome in menu %}
+        {% endfor %}
+        {% if usr %}
+        {% else %}
+        <div class="navbard">
+            <a class="nav1" href="/carrinho">Web Player</a>
+            <a class="nav1" href="/login">Login</a>
+            <a class="nav1" href="/registo">Registo</a>
+            <a class="nav1" href="/apagar">Apagar</a>
+        </div>
             {% endif %}
-    </div>
+</div>
 
     {% block conteudo %}
     {% endblock %}
 
-<style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-}
-</style>
+<a class="toTop fa fa-angle-up" href="#" style="display: block;"></a>
 
 
-
-    <div class="footer">
-        <img src="/static/Capturar.PNG">
-        <a class="facebook" href="https://pt-pt.facebook.com/"><i class="fab fa-facebook-f"></i>
-            <a class="instagram" href="https://www.instagram.com/?hl=pt"><i class="fab fa-instagram"></i>
-                <a class="twitter" href="https://twitter.com/spotify"><i class="fab fa-twitter"></i>
-
-                    <center>
-                        <small style="color:#bbb">&copy; Copyright 2019 Gonçalo Figueiredo</small>
-                    </center>
-
-    </div>
-
-
+<div class="footer">
+    <img src="/static/Capturar.PNG">
+    <h4>Segue-nos nas redes socias !!:</h4>
+    <a class="facebook" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+    <a class="instagram" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+    <a class="twitter" href="https://twitter.com/spotify"><i class="fab fa-twitter"></i></a>
+    <center>
+        <small style="color:#bbb">&copy; Copyright 2019 Gonçalo Figueiredo</small>
+    </center>
+</div>
 
 </html>
 

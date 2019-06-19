@@ -10,16 +10,13 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<body background= "/static/fds.png">
 <center>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <img class="fds" src="/static/fds.png">
+</center>
+
+<center>
 <h1>Alterar a Password</h1>
 <fieldset>
-    <legend>Introduza os seus dados</legend>
     <form method="post">
         <h4>Utilizador</h4>
         <input type="text" name='utilizador' required>
@@ -36,6 +33,7 @@
 {{ erro }}
 {% endif %}
 </center>
+<p style="padding: 100px;"></p>
 </body>
 </html>
 {% endblock %}
